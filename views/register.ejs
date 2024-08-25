@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head&gt;
+<meta charset="UTF-8">
+<title>ثبت‌نام</title>
+</head>
+<body>
+<h1>ثبت‌نام جدید</h1>
+<form method="POST">
+    <label for="name">نام:</label>
+    <input type="text" id="name" name="name" required><br>
+    <label for="email">ایمیل:</label>
+    <input type="email" id="email" name="email" required><br>
+    <button type="submit">ثبت‌نام</button>
+</form>
+<a href="/">بازگشت به لیست</a>
+</body>
+</html>
+<style>
+    body {
+        font-family: 'vazir', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 100vh;
+        background-color: #f5f5f5;
+        text-align: center;
+    }
+    h1 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+    form {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        width: 400px;
+    }
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+    input[type="text"]
+    input[type="email"] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+        font-size: 16px;
+
+    }
+    input:focus {
+        outline: none;
+        border-color: #03a8a8;
+        box-shadow: 0 0 5px #03a8a8
+    }
+    
+
+  button {
+    background-color: #03a8a8; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0c3a55;
+  }
+  a {
+  color: #007bff; /* Blue link */
+  text-decoration: none;
+  margin-top: 15px;
+  display: block; /* Makes the link take up the full width */
+  text-align: center;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+</style>

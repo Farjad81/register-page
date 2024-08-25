@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>ویرایش اطلاعات</title>
+    <style>
+        head{
+            text-align: center;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>ویرایش اطلاعات</h1>
+    <button onclick="openModal()">ویرایش</button>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <form method="POST">
+                <label for="name">نام:</label>
+                <input type="text" id="name" name="name" value="<%= registration.name %>" required><br>
+                <label for="email">ایمیل:</label>
+                <input type="email" id="email" name="email" value="<%= registration.email %>" required><br>
+                <button type="submit">ذخیره تغییرات</button>
+            </form>
+            <a href="/">بازگشت به لیست</a>
+            <button onclick="closeModal()">بستن</button>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById("modal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+</body>
+</html>
+<style>
+    .h1 {
+        text-align: center;
+    }
+</style>
+<style>
+    /* Basic styles for the whole page */
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  color: #333;
+}
+
+/* Button styles */
+button {
+  background-color: #03a8a8; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0c3a55;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"] {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+}
+
+/* Close button inside modal */
+.modal-content button:last-of-type {
+  background-color: #03a8a8; /* Red */
+  margin-top: 15px;
+}
+
+.modal-content button:last-of-type:hover {
+  background-color: #0c3a55;
+}
+
+</style>

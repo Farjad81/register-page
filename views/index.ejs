@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>لیست ثبت‌نامی‌ها</title>
+</head>
+<body>
+    <h1>لیست ثبت‌نامی‌ها</h1>
+    <a href="/register">ثبت‌نام جدید</a>
+    <table border="1">
+        <tr>
+            <th>نام</th>
+            <th>ایمیل</th>
+            <th>عملیات</th>
+        </tr>
+        <% registrations.forEach((registration, index) => { %>
+        <tr>
+            <td><%= registration.name %></td>
+            <td><%= registration.email %></td>
+            <td>
+                <a href="/edit/<%= index %>">ویرایش</a>
+                <a href="/delete/<%= index %>">حذف</a>
+            </td>
+        </tr>
+        <% }) %>
+    </table>
+</body>
+</html>
+<style>
+    body {
+        font-family: "vazir", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f5f5f5;
+        text-align: center;
+    }
+    h1 {
+        color: #007bff;
+        text-decoration: none;
+        margin-bottom: 15px;
+        display: inline-block;
+        padding: 8px 12px;
+        border: 1px solid #007bff;
+        transition: background-color 0.3s ease;
+    }
+    a:hover {
+        background-color: #e9ecef;
+    }
+    table {
+        border-collapse: collapse;
+        width: 80%;
+        max-width: 800px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    th, td {
+        text-align: center;
+        padding: 12px;
+        border: 1px solid #ddd;
+    }
+    th {
+        background-color: #f5f5f5;
+        font-weight: bold;
+    }
+    td a {
+        display: inline-block;
+        padding: 6px 10px;
+        margin-left: 5px;
+        border: 1px solid #ddd;
+        font-size: 14px;
+        color: #555;
+    }
+    td a:hover {
+        background-color: #f5f5f5;
+    }
+    a {
+  color: #007bff; /* Blue link */
+  text-decoration: none;
+  margin-top: 15px;
+  display: block; /* Makes the link take up the full width */
+  text-align: center;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+</style>
